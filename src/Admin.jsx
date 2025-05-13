@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { supabase } from "./supabaseClient";
+import CountUp from 'react-countup'
 
 const PASSWORD = "familia123";
 
@@ -71,7 +72,7 @@ export default function AdminPanel() {
                   ))}
                 </ul>
               </div>
-              <p className="mt-2 font-semibold">Total: {maleVotes.length}</p>
+              <p className="mt-2 font-semibold"> Total: <CountUp end={maleVotes.length} duration={1.5} /> </p>
             </div>
             <div className="bg-pink-100 p-4 rounded-xl shadow">
               <h3 className="text-xl font-bold text-pink-700">Menina 💖</h3>
@@ -82,7 +83,7 @@ export default function AdminPanel() {
                   ))}
                 </ul>
               </div>
-              <p className="mt-2 font-semibold">Total: {femaleVotes.length}</p>
+              <p className="mt-2 font-semibold"> Total: <CountUp end={femaleVotes.length} duration={1.5} /> </p>
             </div>
           </div>
 
